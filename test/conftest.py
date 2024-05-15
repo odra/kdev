@@ -1,6 +1,7 @@
 import os
 
 import pytest
+from click.testing import CliRunner
 
 
 @pytest.fixture
@@ -11,3 +12,8 @@ def testdir() -> str:
 @pytest.fixture
 def fixdir(testdir) -> str:
     return f'{testdir}/fixtures'
+
+
+@pytest.fixture
+def runner():
+    return CliRunner()
