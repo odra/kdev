@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "kdev"
+version = "0.1.0"
+description = "A simple tool to easily test custom kernel images during development"
+authors = ["Leonardo Rossetti <me@lrosetti.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    { include="kdev", from="src" }
+]
+
+[tool.poetry.scripts]
+kdev = "kdev.cli:run"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.0"
+pytest-sugar = "^1.0.0"
+mypy = "^1.10.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
