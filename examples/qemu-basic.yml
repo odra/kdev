@@ -1,0 +1,17 @@
+kdev:
+  kernel:
+    path: /path/to/bzImage
+    args:
+      root: /dev/hda
+      console: ttys0 
+  initrd:
+    path: /path/to/initrd 
+  backend:
+    name: qemu-system
+    opts:
+      - -enable-kvm
+      - -nographic
+      - -cpu=host
+      - -m=2048
+      - -drive file=/usr/share/OVMF/OVMF_CODE.fd,if=pflash,format=raw,unit=0,readonly=on \
+      - -drive file=/usr/share/OVMF/OVMF_VARS.fd,if=pflash,format=raw,unit=1,snapshot=on,readonly=off
