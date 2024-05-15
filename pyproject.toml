@@ -10,10 +10,11 @@ packages = [
 ]
 
 [tool.poetry.scripts]
-kdev = "kdev.cli:run"
+kdev = "kdev.cli:entrypoint"
 
 [tool.poetry.dependencies]
 python = "^3.12"
+click = "^8.1.7"
 
 
 [tool.poetry.group.dev.dependencies]
