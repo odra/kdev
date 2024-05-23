@@ -6,4 +6,4 @@ The project is early stage at this point and the examples folder serves as a "ho
 
 ## License
 
-[MIT] (./LICENSE)
+[MIT](./LICENSE)
