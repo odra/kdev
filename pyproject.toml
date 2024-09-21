@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "kdev"
+version = "0.1.0"
+description = "cli to build, deploy and test the linux kernel"
+authors = ["odra <me@lrossetti.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    {include="kdev", from="src/"}
+]
+
+[tool.poetry.scripts]
+kdev = "kdev.cli:run"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+click = "^8.1.7"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+pytest-sugar = "^1.0.0"
+mypy = "^1.11.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
